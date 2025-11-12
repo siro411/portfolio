@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;900&display=swap');
 
-html,
-body {
-  font-family: 'Poppins', sans-serif;
-  background: white;
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -13,65 +11,100 @@ body {
 
 nav {
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   justify-content: space-between;
-  align-items: center;
-  padding: 16px 30px;
-}
-
-nav #logo {
-  display: flex;
   flex-direction: row;
+  width: 100%;
+  align-items: baseline;
+  /* liquid glass  */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-nav #logo img {
-  height: 60px;
-  width: 40px;
+
+nav img {
+  /* height: 60px;
+  width: 40px; */
   object-fit: contain;
+  padding-left: 32px;
 }
 
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 16px;
+  align-items: center;
+  gap: 32px;
   list-style: none;
   width: 60%;
-  padding: 0px;
-  margin: 5px 0 50px 0;
-}
-
-nav ul li {
-  margin: 20px;
+  padding-right: 50px;
 }
 
 nav ul a {
-  margin: 10px;
   text-decoration: none;
   color: black;
   white-space: nowrap;
+}
 
+nav ul a:hover {
+  color: #ed84e6 !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(at 30% 20%, #ff7eb3, transparent 60%),
+    radial-gradient(at 80% 10%, #65d0ff, transparent 60%),
+    radial-gradient(at 50% 80%, #8b5cf6, transparent 60%),
+    radial-gradient(at 20% 70%, #22d3ee, transparent 60%);
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  animation: moveGradient 15s ease-in-out infinite alternate;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
   display: flex;
   flex-direction: row;
   padding: 16px 50px;
-  align-items: center;
-  height: 40vh;
+  align-items: baseline;
+  /* height: 40vh; */
+  box-sizing: border-box;
+  margin-top: 20px;
 }
 
-
-header .profil {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
+header .intro {
+  padding: 10px 0;
 }
 
 header img {
   width: 600px;
   height: auto;
-  margin-left: 150px;
+  margin: 50px 0 0 150px;
 }
 
 header h1 {
@@ -102,7 +135,7 @@ header .button {
   gap: 50px;
   padding: 32px;
   justify-content: space-around;
-  margin: 50px;
+  margin: 20px 0 50px 0;
 
 }
 
@@ -136,14 +169,14 @@ header .button {
 
 #projects h1 {
   text-align: center;
-  margin: 50px;
+  margin-top: 80px;
 }
 
 #projects-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
   margin: 0;
   width: 100%;
@@ -159,7 +192,7 @@ header .button {
 }
 
 .project img {
-  object-fit: contain;
+  object-fit: none;
 }
 
 .project h3,
@@ -170,7 +203,7 @@ header .button {
 
 #temoignage h1 {
   text-align: center;
-  margin: 50px;
+  margin-top: 70px;
 }
 
 .temos-contanier {
@@ -178,21 +211,31 @@ header .button {
   flex-direction: row;
   padding: 16px 30px;
   gap: 8px;
-  flex-wrap: wrap;
   justify-content: space-around;
+  align-items: stretch;
 }
 
 .temo {
   display: flex;
   width: 32%;
-  height: auto;
+  justify-content: space-between;
   flex-direction: column;
-  background: rgb(231, 229, 229);
-  padding-top: 50px 20px 0 50px;
+  padding: 40px 30px;
+  border-radius: 8px;
+  /* liquid-glass */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .temo h5 {
-  margin: 20px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 
@@ -200,12 +243,14 @@ header .button {
   display: flex;
   flex-direction: row;
   gap: 12px;
-  margin: 50px;
 
 }
 
 .temo-info img {
-  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
 }
 
 footer {
@@ -217,7 +262,7 @@ footer {
 
 }
 
-footer .contact {
+footer .contact-container {
   width: 60%;
   margin-right: 50px;
 }
@@ -234,6 +279,21 @@ footer .button {
   transition: all .3s ease-in-out;
 }
 
+footer .contacts-info {
+  display: flex;
+  gap: 40px;
+}
+
+
 footer p {
   margin: 20px 0;
+}
+
+.unchecked {
+  color: white
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif !important;
 }
