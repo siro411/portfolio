@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;900&display=swap');
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+}
+
+nav #logo {
+  display: flex;
+  flex-direction: row;
+}
+
+nav #logo img {
+  height: 60px;
+  width: 40px;
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+  list-style: none;
+  width: 60%;
+  padding: 0px;
+  margin: 5px 0 50px 0;
+}
+
+nav ul li {
+  margin: 20px;
+}
+
+nav ul a {
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 50px;
+  align-items: center;
+  height: 40vh;
+}
+
+
+header .profil {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+header img {
+  width: 600px;
+  height: auto;
+  margin-left: 150px;
+}
+
+header h1 {
+  font-size: 3em;
+
+}
+
+header h1,
+header h3 {
+  margin: 20px 0px
+}
+
+header .button {
+  display: flex;
+  text-decoration: none;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  padding: 20px 50px;
+  margin: 50px 0px;
+  transition: all .3s ease-in-out;
+
+}
+
+#competence-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 50px;
+  padding: 32px;
+  justify-content: space-around;
+  margin: 50px;
+
+}
+
+.competence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 0;
+
+}
+
+.competence img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.competence p {
+  font-size: 16px;
+  text-align: center;
+  max-width: 260px;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+#projects h1 {
+  text-align: center;
+  margin: 50px;
+}
+
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  width: 100%;
+}
+
+
+.project {
+  width: 31%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project img {
+  object-fit: contain;
+}
+
+.project h3,
+.project p {
+  margin: 8px;
+}
+
+
+#temoignage h1 {
+  text-align: center;
+  margin: 50px;
+}
+
+.temos-contanier {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 30px;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.temo {
+  display: flex;
+  width: 32%;
+  height: auto;
+  flex-direction: column;
+  background: rgb(231, 229, 229);
+  padding-top: 50px 20px 0 50px;
+}
+
+.temo h5 {
+  margin: 20px;
+}
+
+
+.temo-info {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin: 50px;
+
+}
+
+.temo-info img {
+  margin-right: 10px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 50px;
+
+}
+
+footer .contact {
+  width: 60%;
+  margin-right: 50px;
+}
+
+footer .button {
+  display: flex;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  background-color: black;
+  color: white;
+  padding: 20px 50px;
+  margin: 50px 0px;
+  transition: all .3s ease-in-out;
+}
+
+footer p {
+  margin: 20px 0;
+}
